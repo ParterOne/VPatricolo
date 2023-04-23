@@ -11,12 +11,14 @@ const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
 let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-if (isMobile){camera.fov = 45; // adjust field of view for mobile
-camera.position.setZ(100);
-camera.position.setY(-15);
-camera.position.setX(5.5);
-camera.updateProjectionMatrix();
-}else{camera.position.setZ(30);}
+//if (isMobile){camera.fov = 45; // adjust field of view for mobile
+//camera.position.setZ(100);
+//camera.position.setY(-15);
+//camera.position.setX(5.5);
+//camera.updateProjectionMatrix();
+//}else{camera.position.setZ(30);}
+
+camera.position.setZ(30);
 
 const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector('#bg'),
